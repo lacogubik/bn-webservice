@@ -39,6 +39,7 @@ Then you can create a project using the template as follows:
 ```
  cd <my-working-directory>
  lein new bn-webservice <project-name>
+ cd <project-name>
  lein ring server
 ```
 
