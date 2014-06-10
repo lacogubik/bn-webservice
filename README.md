@@ -39,8 +39,23 @@ Then you can create a project using the template as follows:
 ```
  cd <my-working-directory>
  lein new bn-webservice <project-name>
+```
+
+Provided you have created database as per instructions below, you can now start application by:
+```
  cd <project-name>
  lein ring server
+```
+
+## DB
+
+Create the DB as follows (if your project name contains dashes replace them for undescore when creating database):
+
+```
+mysql -uroot -p <password> <enter>
+create database <project-name>;
+grant all on <project-name>.* to '<project-name>'@'localhost' identified by '<project-name>';
+flush privileges;
 ```
 
 ## Todo
