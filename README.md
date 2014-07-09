@@ -22,19 +22,41 @@ And some wrappers round useful Java libraries:
 
 First grab the template and install it (it's not on clojars ... yet)
 
+```
  git clone https://github.com/BrightNorth/bn-webservice
  cd bn-webservice
  lein install
+```
 
 Then edit your ''~/.lein/profiles.clj'' to include the plugin
 
+```
  {:user {:plugins [[bn-webservice/lein-template "0.1.0-SNAPSHOT"]]}}
+```
+
 
 Then you can create a project using the template as follows:
-
+```
  cd <my-working-directory>
  lein new bn-webservice <project-name>
+```
+
+Provided you have created database as per instructions below, you can now start application by:
+```
+ cd <project-name>
  lein ring server
+```
+
+## DB
+
+Create the DB as follows (if your project name contains dashes replace them for undescore when creating database):
+
+```
+mysql -uroot -p <password> <enter>
+create database <project-name>;
+grant all on <project-name>.* to '<project-name>'@'localhost' identified by '<project-name>';
+flush privileges;
+```
 
 ## Todo
 Midje tests
