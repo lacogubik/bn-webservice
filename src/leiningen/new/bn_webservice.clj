@@ -15,7 +15,6 @@
              [".gitignore" (render "gitignore" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
-             ["test/{{sanitized}}/test/core.clj" (render "core_test.clj" data)]
              ["src/log4j.properties" (render "log4j.properties" data)]
              ["src/migrations/V201310221843__create.sql" (render "V201310221843__create.sql" data)]
              ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
