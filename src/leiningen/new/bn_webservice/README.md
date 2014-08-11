@@ -15,8 +15,8 @@ Create the DB as follows:
 
 ```
 mysql -uroot -p <enter> <enter>
-create database {{name}};
-grant all on {{name}}.* to '{{name}}'@'localhost' identified by '{{name}}';
+create database {{sanitized}};
+grant all on {{sanitized}}.* to '{{sanitized}}'@'localhost' identified by '{{sanitized}}';
 flush privileges;
 ```
 

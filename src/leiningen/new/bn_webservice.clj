@@ -12,6 +12,7 @@
              "resources/public"
              "src/migrations"
              ["application.conf" (render "application.conf" data)]
+             ["application-test.conf" (render "application-test.conf" data)]
              [".gitignore" (render "gitignore" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
