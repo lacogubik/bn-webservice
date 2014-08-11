@@ -1,4 +1,5 @@
 (ns {{name}}.core
+  (:gen-class :main true)
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [{{name}}.db :refer :all]
